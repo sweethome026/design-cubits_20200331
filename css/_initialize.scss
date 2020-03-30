@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+
+/*==================================================
+
+sectioning
+==================================================*/
+
+
+/*	outline	*/
+/* ↓htmlに書かれたフォントサイズをルートとして、これを元にremの計算をする。 */
+html {
+	font-size: 62.5%;/* 10px */
+}
+
+html,
+body {
+	margin:0;
+	padding:0;
+	border:0;
+	line-height:100%;
+}
+body {
+	font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;/* デザインに合わせて変更する */
+	font-size:16px;/* デザインに合わせて変更する */
+	font-size:1.6rem;/* デザインに合わせて変更する */
+}
+
+p,
+blockquote,
+address,
+small,
+dt,
+dd,
+li,
+th,
+td,
+td,
+span {
+	line-height:175%;/* デザインに合わせて変更する */
+}
+div {
+	line-height:100%;
+}
+
+
+/*	heading	*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin:0;
+	padding:0;
+	vertical-align:top;
+	font-weight:normal;
+	font-size:100%;
+	line-height:160%;/* デザインに合わせて変更する */
+	letter-spacing: 0em; /* トラッキング÷1000 */
+}
+
+
+
+/*==================================================
+
+link
+==================================================*/
+
+
+a {
+	color:inherit;
+	text-decoration:inherit;
+	cursor:pointer;
+}
+a:hover {
+	color: #808080;/* デザインに合わせて変更する */
+	text-decoration:none;/* デザインに合わせて変更する */
+}
+
+
+
+/*==================================================
+
+content
+==================================================*/
+
+
+/*	text	*/
+
+p,
+blockquote {
+	margin:0;
+}
+address {
+	font-style:normal;
+}
+
+
+/*	list	*/
+
+ol,
+ul,
+dl,
+dd {
+	margin:0;
+}
+ol,
+ul {
+	padding:0;
+	list-style:none;
+}
+
+
+/*	table	*/
+
+table {
+	border-collapse:collapse;
+}
+caption {
+}
+th,
+td {
+	padding:0;
+}
+th {
+	font-weight:normal;
+}
+
+
+/*	embed	*/
+
+img {
+	vertical-align:bottom;
+	border:0;
+}
+figure {
+	margin:0;
+	padding:0;
+}
+
+
+/*	semantics	*/
+
+ruby,
+rt,
+mark,
+menu {
+	margin:0;
+	padding:0;
+}
+small {
+	font-size:100%;
+}
+em,
+cite,
+dfn,
+i {
+	font-style:normal;
+}
+strong,
+b {
+	font-weight:normal;
+}
+ins,
+del {
+	text-decoration:none;
+}
+q {
+	quotes:none;
+}
+sup,
+sub {
+	vertical-align:baseline;
+}
+ruby,
+rt,
+mark {
+	line-height:100%;
+}
+mark {
+	background:none;
+}
+
+
+
+/*==================================================
+
+form
+==================================================*/
+
+form {
+	margin:0;
+}
+input,
+select,
+textarea,
+button {
+	margin:0;
+	padding:0;
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	text-shadow: none;
+	-moz-appearance: none;
+  -webkit-appearance: none;
+	appearance: none;
+	font-family:inherit;
+	font-size: 16px
+}
+select {
+	line-height:100%;
+	font-weight:normal;
+}
+fieldset {
+	margin:0;
+	padding:0;
+	border:0;
+}

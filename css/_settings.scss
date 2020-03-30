@@ -1,0 +1,126 @@
+// scss index
+// colors
+// break-point
+// fonts
+// others
+
+// colors
+$color-pagettl: #17636c;
+$color-txt01: #2d2421;
+$color-textLink: #97b7bb;
+$color-bg01: #f7f6f3;
+$color-logo: #9fdde3;
+$color-main: #68c4cd;
+$color-trueWhite: #fff;
+$color-offWhite: #ebebeb;
+$color-txt02: #666666;
+$color-txt03: #808080;
+$color-txt04: #ff6f61;
+$color-tag-css: #9ad1ef;
+$color-tag-illustrator: #f0b899;
+$color-tag-wp: #99d1f0;
+$color-tag-coding: #c9e693;
+$color-tag-others: #f099a6;
+$color-tag-freelance: #99a6f0;
+$color-tag-days: #f0e399;
+$color-bg02: #ebebeb;
+$color-border: #cccccc;
+
+
+
+
+
+
+// break-point
+// PC 1025px〜
+// Tab 769px〜1024px
+// SP ~768px
+//pcのみ
+@mixin break-pc-l {
+  @media screen and (min-width:1921px) { @content; }
+}
+@mixin break-pc {
+  @media screen and (min-width:1025px) { @content; }
+}
+//pcとtab共通
+@mixin break-pc-tab {
+  @media screen and (min-width:769px) { @content; }
+}
+// tabとsp共通
+@mixin break-tab-sp {
+  @media screen and (max-width:1024px) { @content; }
+}
+// tabのみ
+@mixin break-tab {
+  @media screen and (max-width:1024px) and (min-width:769px) { @content; }
+}
+// spのみ
+@mixin break-sp {
+  @media screen and (max-width:768px) { @content; }
+}
+
+
+// fonts
+@mixin font-yugothic($fw:400) {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
+  font-weight: $fw;
+}
+
+
+// others
+// 破線
+@mixin dashed-line($lc:#ccc,$lp:left top) {
+  background-image: -webkit-gradient(linear, left top, right top, from($lc), color-stop(57.142%, $lc), color-stop(42.858%, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(left, $lc, $lc 57.142%, transparent 42.858%, transparent 100%);
+  background-image: -o-linear-gradient(left, $lc, $lc 57.142%, transparent 42.858%, transparent 100%);
+  background-image: linear-gradient(to right, $lc, $lc 57.142%, transparent 42.858%, transparent 100%);
+  background-size: 7px 1px;
+  background-repeat: repeat-x;
+  background-position: $lp;
+}
+
+// 破線　不透明度80%
+@mixin dashed-line-opacity($lc:rgba(244,244,244,0.8),$lp:left top) {
+  background-image: -webkit-gradient(linear, left top, right top, from($lc), color-stop(57.142%, $lc), color-stop(42.858%, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(left, $lc, $lc 57.142%, transparent 42.858%, transparent 100%);
+  background-image: -o-linear-gradient(left, $lc, $lc 57.142%, transparent 42.858%, transparent 100%);
+  background-image: linear-gradient(to right, $lc, $lc 57.142%, transparent 42.858%, transparent 100%);
+  background-size: 7px 1px;
+  background-repeat: repeat-x;
+  background-position: $lp;
+}
+
+// btn-white
+@mixin btn--white {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 240px;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 27.5px;
+    background: $color-trueWhite;
+    color: $color-main;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s;
+
+    &:hover {
+      background: $color-logo;
+    }
+  }
+}
+
+//blog-tag
+@mixin blog-tag {
+  margin-right: 16px;
+  display: block;
+  width: 110px;
+  text-align: center;
+  line-height: 175%;
+  color: $color-trueWhite;
+}

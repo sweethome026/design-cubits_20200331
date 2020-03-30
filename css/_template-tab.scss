@@ -1,0 +1,186 @@
+// @charset "utf-8";
+@import "settings";
+
+/*
+**
+Template style
+** outline
+** header
+** gnav
+** pagetop
+** footer
+** main common
+**
+Page style
+** top
+** about
+**
+*/
+
+/*==================================================
+
+** outline
+==================================================*/
+
+body {
+  &.opened {
+    overflow-y: hidden;
+  }
+}
+
+.wrap {
+  width: 95%;
+}
+
+
+
+/*==================================================
+
+** header
+==================================================*/
+
+.header {
+  transition: left linear 0.5s;
+  background: $color-logo;
+  height: 60px;
+
+  .header-logo {
+    position: static;
+    margin-left: 0;
+
+    a {
+      transition: opacity 0.6s;
+
+      &:hover {
+        transform: none;
+        opacity: 0.8;
+        transition: opacity 0.4s;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      height: 32px;
+    }
+  }
+
+  picture {
+    display: block;
+    position: relative;
+    height: 60px;
+  }
+
+  //↓PC表示でdisplay: none;にしていたのを解除するため
+  #menuBtn {
+    display: block;
+  }
+}
+
+
+
+
+/*==================================================
+
+** gnav
+==================================================*/
+
+.gnav {
+  position: fixed;
+  top: 0;
+  right: -270px;
+  width: 270px;
+  height: 100vh; //vh=Viewport Height。1vhはviewportの高さの1%。
+  // height: 100vh; //vh=Viewport Height。1vhはviewportの高さの1%。
+  background-color: $color-main;
+  background-image: url("../imgs/gnav_bg_img.svg");
+  background-repeat: no-repeat;
+  background-position: left 340px;
+  background-size: contain;
+  transition: right linear 0.5s;
+
+  .opened & {
+    right: 0;
+  }
+
+  .gnav__list {
+    // 親要素にposition: absolute;は必要？
+    position: relative;
+    top: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0 20px;
+
+    // ↓これより下の線より濃い、opacityが効いていないように見える。
+    @include dashed-line-opacity;
+
+    // @includeを書くのは、プロパティ内の一番下（今の位置でいいのか？）
+    &__item {
+      height: 61px;
+      @include dashed-line-opacity($lc:rgba(244,244,244,0.8),$lp:left bottom);
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align-last: left;
+        color: $color-trueWhite;
+        line-height: 61px;
+
+      }
+    }
+  }
+}
+
+
+
+/*==================================================
+
+** main common
+==================================================*/
+
+.main {
+  margin-top: 60px;
+
+  table {
+    &.outline {
+      tr {
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        th {
+          display: block;
+          width: auto;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          font-size: 1.7rem;
+        }
+      
+        td {
+          display: block;
+          width: auto;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          margin-top: 5px;
+
+          + td {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  ul {
+    &.dashicon {
+      margin-top: 5px;
+    }
+  }
+}
+
+

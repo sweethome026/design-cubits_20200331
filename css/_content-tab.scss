@@ -1,0 +1,161 @@
+/*==================================================
+
+** top
+==================================================*/
+
+#top {
+	.mainvsl {
+		&__slogan {
+			bottom: 40px;
+			left: 7.5vw;
+		}
+
+	}
+
+	.services {
+		&__list {
+			margin-left: auto;
+			margin-right: auto;
+			width: 80%;
+
+			&__item {
+				margin-right: 0;
+				width: 30%;
+				margin-right: 5%;
+
+				&:nth-child(3n) {
+					margin-right: 0;
+				}
+
+				&:nth-child(4n) {
+					margin-right: 5%;
+				}
+			}
+		}
+
+		&__icon {
+			width: 100%;
+			max-width: 160px;
+		}
+	}
+}
+
+
+/*==================================================
+
+** about
+==================================================*/
+
+#about {
+	.concept {
+		&__profilebox {
+			&__description {
+				.name {
+					word-break: keep-all;
+				}
+			}
+		}
+	}
+}
+
+
+/*==================================================
+
+** services
+==================================================*/
+
+#services {
+	.skill {
+		&__list {
+			margin-left: auto;
+			margin-right: auto;
+			width: 80%;
+
+			&__item {
+				margin-right: 0;
+				width: 30%;
+				margin-right: 5%;
+
+				&:nth-child(3n) {
+					margin-right: 0;
+				}
+
+				&:nth-child(4n) {
+					margin-right: 5%;
+				}
+			}
+		}
+
+		&__icon {
+			width: 100%;
+			max-width: 160px;
+		}
+		// &__list {
+		// 	margin-left: auto;
+		// 	margin-right: auto;
+		// 	width: 60%;
+
+		// 	&__item {
+		// 		margin-right: 0;
+		// 		width: 44%;
+
+		// 		&:nth-child(odd) {
+		// 			margin-right: 12%;
+		// 		}
+
+		// 		&:nth-child(even) {
+		// 			margin-right: 0;
+		// 		}
+		// 	}
+		// }
+
+		// &__icon {
+		// 	width: 100%;
+		// 	max-width: 160px;
+		// }
+	}
+
+	.illustrations {
+		&__item {
+			width: 30.7%;
+			margin-top: calc((100% - (30.7% * 3)) / 2);
+			margin-right: calc((100% - (30.7% * 3)) / 2);
+
+			&:nth-child(4n) {
+				margin-right: calc((100% - (30.7% * 3)) / 2);
+
+			}
+
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.instructor {
+
+		&__list {
+			margin-right: auto;
+			margin-left: auto;
+			padding-left: 7%;
+			padding-right: 3px;
+			width: 90%;
+		}
+	}
+}
+
+
+/*==================================================
+
+** blog
+==================================================*/
+
+#blog {
+	.footer__content {
+		padding: 0;
+	}
+}
+
+
+
+
