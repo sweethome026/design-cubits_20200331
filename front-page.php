@@ -74,7 +74,7 @@
             </li>
           </ul>
           <div class="btn">
-            <a href="services.html">サービス紹介を見る</a>
+            <a href="/index.php?page_id=67">サービス紹介を見る</a>
           </div>
         </section><!-- //services -->
 
@@ -90,21 +90,22 @@
                 <article id="post-<?php the_ID(); ?>" <?php post_class('blog__article'); ?>>
                   <a class="blog__linkbox" href="<?php the_permalink(); ?>">
                     <div class="blog__info">
-                      <span class="blog__info__tag 
-                      tag--<?php $cat = get_the_category(); $cat = $cat[0];
-                      if ($cat->parent) {
-                          $parent_cat = get_category($cat->category_parent);
-                          echo $parent_slug = $parent_cat->slug;
-                      } else {
-                          echo $parent_slug = $parent_cat->slug;
-                      } ?>">
+                        <?php $this_categories = get_the_category();
+                          $this_categories = $this_categories[0];
+                          $parent_cat = get_category($this_categories->category_parent);
+                          if ($this_categories) {
+                              $this_category_color = get_field('catcolor', 'category_' . $parent_cat[0]->term_id);
+                              $this_category_name = $parent_cat[0]->name;
+                              echo '<span class="blog__info__tag" style="' . esc_attr('background:' . $this_category_color) . ';">';
+                          }
+                        ?>
                         <?php $cat = get_the_category(); $cat = $cat[0];
-                      if ($cat->parent) {
-                          $parent = get_category($cat->parent);
-                          echo $parent->cat_name;
-                      } else {
-                          echo $cat->cat_name;
-                      } ?><!--テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取得。-->
+                          if ($cat->parent) {
+                              $parent = get_category($cat->parent);
+                              echo $parent->cat_name;
+                          } else {
+                              echo $cat->cat_name;
+                          } ?><!--テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取得。-->
                       </span>
                       <time class="blog__info__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                     </div>

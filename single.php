@@ -28,35 +28,28 @@
               <!-- カテゴリーは配列で返ってくる。
                   まずget_the_category();で投稿が分類されているカテゴリーを配列で取得。
                   $this_categories[0];で、返ってきたカテゴリー情報の「1番目の情報」を取得している。
-                  カテゴリー情報の「1番目の情報」
-
-                    
-
--->
-              <?php
-                $this_categories = get_the_category();
-                $this_categories = $this_categories[0];
-                $parent_cat = get_category($this_categories->category_parent);
-                if ($this_categories) {
-                    $this_category_color = get_field('catcolor', 'category_'.$parent_cat->term_id);
-                    $this_category_name = $parent_cat->name; ?>
-
-                <a class="article__info__tag" style="<?php echo esc_attr('background:'.$this_category_color); ?>">
-                <!-- ↓if文の終了タグをaタグの後に持ってくることで、if文の処理はaタグにもかかっていることになっている。 -->
-                <?php
-                } ?>
-
-                <?php $cat = get_the_category();
-                  $cat = $cat[0];
-                  if ($cat->parent) {
-                      $parent = get_category($cat->parent);
-                      echo $parent->cat_name;
-                  } else {
-                      echo $cat->cat_name;
-                  }
+                  -->
+                <?php $this_categories = get_the_category();
+                    $this_categories = $this_categories[0];
+                    // ↓$this_categoriesの中のcategory_parentという変数の値を取り出そうとしている。category_parentは(整数) 親カテゴリーの ID - 親がなければ 0 が入る（parent にも同じ値が入る）。
+                    $parent_cat = get_category($this_categories->category_parent);
+                    if ($this_categories) {
+                        $this_category_color = get_field('catcolor', 'category_' .$parent_cat[0]->term_id);
+                        $this_category_name = $parent_cat[0]->name;
                 ?>
-                </a>
+                <a class="article__info__tag" style="<php echo 'background:' . $this_category_color ?>">
+                <?php  } ?>
 
+                    <?php $cat = get_the_category();
+                    $cat = $cat[0];
+                    if ($cat->parent) {
+                        $parent = get_category($cat->parent);
+                        echo $parent->cat_name;
+                    } else {
+                        echo $cat->cat_name;
+                    }
+                    ?>
+                </a>
                 <time class="article__info__date">2000.00.00</time>
               </div>
               <h1 class="single-article__header__heading">
