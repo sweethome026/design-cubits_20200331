@@ -32,24 +32,25 @@
                 <?php $this_categories = get_the_category();
                     $this_categories = $this_categories[0];
                     // ↓$this_categoriesの中のcategory_parentという変数の値を取り出そうとしている。category_parentは(整数) 親カテゴリーの ID - 親がなければ 0 が入る（parent にも同じ値が入る）。
-                    $parent_cat = get_category($this_categories->category_parent);
-                    if ($this_categories) {
-                        $this_category_color = get_field('catcolor', 'category_' .$parent_cat[0]->term_id);
-                        $this_category_name = $parent_cat[0]->name;
-                ?>
-                <a class="article__info__tag" style="<php echo 'background:' . $this_category_color ?>">
-                <?php  } ?>
+                    $parent_cat = $this_categories;
+                      if($this_categories->category_parent) { //category_parentは親カテゴリの「ID」
+                          $parent_cat = get_category($this_categories->category_parent);
+                      }
+                      if ($this_categories) {
+                          $this_category_color = get_field('catcolor', 'category_' . $parent_cat->term_id);
+                          $this_category_name = $parent_cat->name;
+                          echo '<a class="article__info__tag" style="' . esc_attr('background:' . $this_category_color) . ';">';
+                      }
+                                        ?>
+                    <?php $cat = get_the_category(); $cat = $cat[0];
+                      if ($cat->parent) {
+                          $parent = get_category($cat->parent);
+                          echo $parent->cat_name;
+                      } else {
+                          echo $cat->cat_name;
+                      } ?><!--テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取得。-->
+                  </a>
 
-                    <?php $cat = get_the_category();
-                    $cat = $cat[0];
-                    if ($cat->parent) {
-                        $parent = get_category($cat->parent);
-                        echo $parent->cat_name;
-                    } else {
-                        echo $cat->cat_name;
-                    }
-                    ?>
-                </a>
                 <time class="article__info__date">2000.00.00</time>
               </div>
               <h1 class="single-article__header__heading">
