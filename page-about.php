@@ -13,7 +13,7 @@
 
 		<div class="breadcrumbs wrap">
 			<ol>
-				<li><a href="index.html">HOME</a></li>
+				<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">HOME</a></li>
 				<li>design cubitsについて</li>
 			</ol>
 		</div>
@@ -28,7 +28,7 @@
 				</p>
 				<div class="concept__profilebox">
 					<div class="concept__profilebox__contents">
-						<figure class="concept__profilebox__imgbox"><img src="<?php echo get_template_directory_uri(); ?>/imgs/about/about_concept_img01.jpg" alt=""></figure>
+						<figure class="concept__profilebox__imgbox"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/about/about_concept_img01.jpg" alt=""></figure>
 						<div class="concept__profilebox__description">
 							<p class="profession">Webデザイナー</p>
 							<p class="name">マスナガ キミヨ</p>

@@ -25,7 +25,7 @@
           </li>
         </ul>
         <ul class="footer__under">
-          <li class="privacy-policy"><a href="#"><small>プライバシーポリシー</small></a></li>
+          <li class="privacy-policy"><a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=3"><small>プライバシーポリシー</small></a></li>
           <li class="copyright"><small>&copy; 2020 design cubits</small></li>
        </ul>
       </div>
