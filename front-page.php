@@ -116,7 +116,7 @@
                   <time class="blog__info__date" datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'Y.m.d' ); ?></time>
                 </div>
                 <h2 class="blog__title"><?php the_title(); ?></h2>
-                <p class="blog__exerpt"><?php echo get_the_excerpt(); ?></p>
+                <p class="blog__exerpt"><?php echo esc_url( get_the_excerpt() ); ?></p>
               </a>
             </article>
       <?php
