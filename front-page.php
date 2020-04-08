@@ -85,7 +85,7 @@
 
       <?php
         $args = array( 'posts_per_page' => 3 );
-        $postslist = get_posts($args);
+        $postslist = get_posts( $args );
         foreach( $postslist as $post ) :  /* ループ開始 */
           setup_postdata( $post ); ?> <!-- 記事データの取得 -->
             <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog__article' ); ?>>
@@ -96,24 +96,24 @@
                       $this_categories = get_the_category();
                       $this_categories = $this_categories[0];
                       $parent_cat = $this_categories;
-                      if($this_categories->category_parent) { //category_parentは親カテゴリの「ID」
-                          $parent_cat = get_category($this_categories->category_parent);
+                      if( $this_categories->category_parent　) {//category_parentは親カテゴリの「ID」
+                          $parent_cat = get_category( $this_categories->category_parent );
                       }
-                      if ($this_categories) {
-                          $this_category_color = get_field('catcolor', 'category_' . $parent_cat->term_id);
+                      if ( $this_categories ) {
+                          $this_category_color = get_field( 'catcolor', 'category_' . $parent_cat->term_id );
                           $this_category_name = $parent_cat->name;
                           echo '<span class="blog__info__tag" style="' . esc_attr('background:' . $this_category_color) . ';">';
                       }
                     ?>
                     <?php $cat = get_the_category(); $cat = $cat[0];
-                      if ($cat->parent) {
-                          $parent = get_category($cat->parent);
+                      if ( $cat->parent ) {
+                          $parent = get_category( $cat->parent );
                           echo $parent->cat_name;
                       } else {
                           echo $cat->cat_name;
                       } ?><!--テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取得。-->
                   </span>
-                  <time class="blog__info__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+                  <time class="blog__info__date" datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'Y.m.d' ); ?></time>
                 </div>
                 <h2 class="blog__title"><?php the_title(); ?></h2>
                 <p class="blog__exerpt"><?php echo get_the_excerpt(); ?></p>
@@ -126,7 +126,7 @@
       
       </div><!-- //blog__container -->
       <div class="btn">
-        <a href="#">ブログを見る</a>
+       <a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=30">ブログを見る</a>
       </div>
     </section><!-- //blog -->
 
@@ -134,7 +134,7 @@
       <h2 class="contact__title" data-h2subttl="contact">お問い合わせ</h2>
       <p class="lh-l lh-l--white">お仕事のご依頼・ご相談、その他<br class="contact__br__sp">お問い合わせを受け付けております。<br>まずはお気軽にご連絡ください。</p>
       <div class="btn btn--white">
-        <a href="contact.html">お問い合わせフォームへ</a>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=119">お問い合わせフォームへ</a>
       </div>
     </section><!-- //contact -->
   </div>

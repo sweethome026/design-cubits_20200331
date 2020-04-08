@@ -11,9 +11,9 @@
 	<?php wp_head(); ?>
 
   	<!-- ファビコン設定 -->
-	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/imgs/favicon.ico">
-	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/imgs/apple-touch-icon-180x180.png" sizes="180×180">
-	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/imgs/icon-192x192.png" sizes="192×192" type="image/png">
+	<link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/favicon.ico">
+	<link rel="apple-touch-icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/apple-touch-icon-180x180.png" sizes="180×180">
+	<link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/icon-192x192.png" sizes="192×192" type="image/png">
   <!-- InstanceBeginEditable name="doctitle" -->
 
   <title>
@@ -34,10 +34,10 @@
   <header id="header" class="header">
     <div class="header__container">
       <div class="header-logo">
-        <a href="<?php echo home_url(); ?>">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
           <picture>
-            <source media="(max-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/imgs/logo_white.svg" alt="design cubits（デザインキュービッツ）">
-            <img src="<?php echo get_template_directory_uri(); ?>/imgs/logo_pc.svg" alt="design cubits（デザインキュービッツ）" class="js-logo">
+            <source media="(max-width: 1024px)" srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/logo_white.svg" alt="design cubits（デザインキュービッツ）">
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/logo_pc.svg" alt="design cubits（デザインキュービッツ）" class="js-logo">
           </picture>
         </a>
       </div>
@@ -45,15 +45,17 @@
       <!-- WPCOdexを参考にリンクを貼る　参考：投稿、固定ページ、カテゴリーへのリンク -->
       <nav id="gnav" class="gnav">
         <ul class="gnav__list">
-          <li class="gnav__list__item"><a href="/index.php?page_id=67">サービス紹介</a></li>
           <li class="gnav__list__item">
-            <a href="/index.php?page_id=41">design cubitsについて</a>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=67">サービス紹介</a>
           </li>
           <li class="gnav__list__item">
-            <a href="/index.php?page_id=30">ブログ</a>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=41">design cubitsについて</a>
           </li>
           <li class="gnav__list__item">
-            <a href="/index.php?page_id=119">お問い合わせ</a>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=30">ブログ</a>
+          </li>
+          <li class="gnav__list__item">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=119">お問い合わせ</a>
           </li>
         </ul>
       </nav>

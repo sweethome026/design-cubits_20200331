@@ -4,7 +4,7 @@
       <!-- pagetop -->
       <div id="pagetop">
         <a href="index.html">
-          <img src="<?php echo get_template_directory_uri(); ?>/imgs/pagetop_img.svg" alt="ページトップボタン">
+          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/pagetop_img.svg" alt="ページトップボタン">
         </a>
       </div>
       <!-- //pagetop -->
@@ -12,16 +12,16 @@
       <div class="footer__content wrap">
         <ul class="footer__menu">
           <li class="footer__menu__item txt-link">
-            <a href="/index.php?page_id=67">サービス紹介</a>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=67">サービス紹介</a>
           </li>
           <li class="footer__menu__item txt-link">
-            <a href="/index.php?page_id=41">design cubitsについて</a>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=41">design cubitsについて</a>
           </li>
           <li class="footer__menu__item txt-link">
-            <a href="/index.php?page_id=30">ブログ</a>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=30">ブログ</a>
           </li>
           <li class="footer__menu__item txt-link">
-            <a href="/index.php?page_id=119">お問い合わせ</a>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=119">お問い合わせ</a>
           </li>
         </ul>
         <ul class="footer__under">
@@ -33,6 +33,6 @@
     <!-- //footer -->
 
     <!-- jQuery読み込み -->
-    <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/script.js"></script>
   </body>
 <!-- InstanceEnd --></html>

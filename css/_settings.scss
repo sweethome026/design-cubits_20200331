@@ -117,9 +117,11 @@ $color-border: #cccccc;
 
 //blog-tag
 @mixin blog-tag {
-  margin-right: 16px;
   display: block;
-  width: 110px;
+  min-width: 110px;
+  margin-right: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: center;
   line-height: 175%;
   color: $color-trueWhite;
