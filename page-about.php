@@ -1,6 +1,7 @@
-<?php
-//Template Name: aboutページのテンプレート_20200314
-?>
+/**
+* Template Name: 「design cubitsについて」のテンプレート 
+*/
+
 <?php get_header(); ?>
 
     <!-- main -->
