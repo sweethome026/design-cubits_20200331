@@ -1,5 +1,5 @@
 /**
-* Template Name: ブログトップページのテンプレート 
+* Template Name: ブログトップページのテンプレート
 */
 
 <?php get_header(); ?>
@@ -8,13 +8,13 @@
 <main id="main" class="main">
   <!-- InstanceBeginEditable name="main" -->
   <div class="pagettl">
-    <h1 class="pagettl__ttl">ブログhome</h1>
+    <h1 class="pagettl__ttl">ブログ</h1>
     <p class="pagettl__description">フリーランスとして働くWebデザイナーの備忘録・メモ</p>
   </div>
 
   <div class="breadcrumbs wrap">
     <ol>
-      <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">HOME</a></li>
+      <li><a href="<?php echo esc_url(home_url('/')); ?>">HOME</a></li>
       <li>ブログ</li>
     </ol>
   </div>
@@ -31,8 +31,8 @@
               <time class="article__info__date">2000.00.00</p>
             </div>
             <div href="#" class="article__contents">
-              <h2 class="article__title">タイトル入ります テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</h2>
-              <p class="article__exerpt">本文が入ります　テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <h2 class="article__title"><?php the_title(); ?></h2>
+              <p class="article__exerpt"><?php echo esc_url(get_the_excerpt()); ?></p>
             </div>
           </a>
         </article>
@@ -85,7 +85,7 @@
           </a>
         </article>
         <article class="article">
-          <a href="#"  class="article__linkbox">
+          <a href="#" class="article__linkbox">
             <div class="article__info">
               <span class="article__info__tag tag--days">Days</span>
               <time class="article__info__date">2000.00.00</p>

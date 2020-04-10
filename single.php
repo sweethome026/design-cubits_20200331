@@ -41,7 +41,7 @@
                           $this_category_name = $parent_cat->name;
                           echo '<a class="article__info__tag" style="' . esc_attr('background:' . $this_category_color) . ';">';
                       }
-                                        ?>
+                    ?>
                     <?php $cat = get_the_category(); $cat = $cat[0];
                       if ($cat->parent) {
                           $parent = get_category($cat->parent);
@@ -85,7 +85,7 @@
 		<?php
             endwhile;
         endif;
-        ?>
+    ?>
 		
         </section><!-- //blog-main -->
 
