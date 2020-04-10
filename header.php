@@ -42,7 +42,6 @@
         </a>
       </div>
 
-      <!-- WPCOdexを参考にリンクを貼る　参考：投稿、固定ページ、カテゴリーへのリンク -->
       <nav id="gnav" class="gnav">
         <ul class="gnav__list">
           <li class="gnav__list__item">

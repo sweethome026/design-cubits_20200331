@@ -9,7 +9,7 @@
 
 	<div class="breadcrumbs wrap">
 		<ol>
-			<li><a href="#">HOME</a></li>
+      <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">HOME</a></li>
 			<li><span>ページタイトル</span></li>
 		</ol>
 	</div>

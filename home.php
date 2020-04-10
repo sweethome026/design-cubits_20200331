@@ -1,16 +1,20 @@
+/**
+* Template Name: ブログトップページのテンプレート 
+*/
+
 <?php get_header(); ?>
 
 <!-- main -->
 <main id="main" class="main">
   <!-- InstanceBeginEditable name="main" -->
   <div class="pagettl">
-    <h1 class="pagettl__ttl">ブログ</h1>
+    <h1 class="pagettl__ttl">ブログhome</h1>
     <p class="pagettl__description">フリーランスとして働くWebデザイナーの備忘録・メモ</p>
   </div>
 
   <div class="breadcrumbs wrap">
     <ol>
-      <li><a href="#">HOME</a></li>
+      <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">HOME</a></li>
       <li>ブログ</li>
     </ol>
   </div>
