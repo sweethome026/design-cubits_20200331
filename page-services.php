@@ -1,6 +1,6 @@
-/**
-* Template Name: 「サービス紹介」ページのテンプレート 
-*/
+<?php
+//Template Name: servicesページのテンプレート
+?>
 <?php get_header(); ?>
 
     <!-- main -->

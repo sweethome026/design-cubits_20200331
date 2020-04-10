@@ -1,6 +1,3 @@
-/**
-* Template Name: トップページのテンプレート 
-*/
 <?php get_header(); ?>
 
 <!-- main -->
@@ -90,8 +87,7 @@
         $args = array( 'posts_per_page' => 3 );
         $postslist = get_posts( $args );
         foreach( $postslist as $post ) :  /* ループ開始 */
-          setup_postdata( $post ); 
-      ?>
+          setup_postdata( $post ); ?> <!-- 記事データの取得 -->
             <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog__article' ); ?>>
               <a class="blog__linkbox" href="<?php the_permalink(); ?>">
                 <div class="blog__info">
@@ -100,13 +96,13 @@
                       $this_categories = get_the_category();
                       $this_categories = $this_categories[0];
                       $parent_cat = $this_categories;
-                      if( $this_categories->category_parent　) {
+                      if( $this_categories->category_parent　) {//category_parentは親カテゴリの「ID」
                           $parent_cat = get_category( $this_categories->category_parent );
                       }
                       if ( $this_categories ) {
                           $this_category_color = get_field( 'catcolor', 'category_' . $parent_cat->term_id );
                           $this_category_name = $parent_cat->name;
-                          echo '<span class="blog__info__tag" style="' . esc_attr( 'background:' . $this_category_color ) . ';">';
+                          echo '<span class="blog__info__tag" style="' . esc_attr('background:' . $this_category_color) . ';">';
                       }
                     ?>
                     <?php $cat = get_the_category(); $cat = $cat[0];
