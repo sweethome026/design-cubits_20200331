@@ -1872,6 +1872,7 @@ Page style
 }
 
 #blog .blog-main .pagenation a, #blog .blog-main .pagenation span {
+  display: inline-block;
   margin-right: 10px;
   height: 40px;
   width: 40px;
@@ -1899,6 +1900,14 @@ Page style
 
 #blog .blog-main .pagenation .abbreviation-dots {
   background-color: transparent;
+}
+
+#blog .blog-main .pagenation .pages {
+  display: none;
+}
+
+#blog .blog-main .pagenation .wp-pagenavi span:nth-child(3) {
+  display: none;
 }
 
 #blog .blog-sidebar {
@@ -2035,6 +2044,7 @@ Page style
   text-align: center;
   line-height: 175%;
   color: #fff;
+  max-width: 200px;
 }
 
 #blog .widget .recent-posts__article__title {

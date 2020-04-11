@@ -1,4 +1,3 @@
-
 <?php
 /**
 * テーマのセットアップ
@@ -82,6 +81,24 @@ function my_body_id()
     $body_id = esc_attr($slug);
     echo ($body_id) ? 'id="'.$body_id.'"' : '';
 }
-?>
 
 
+/*
+==================================================
+** ページャー設定
+==================================================
+*/
+$paged = get_query_var('paged') ? get_query_var('paged') : 1;    //pagedに渡す変数
+query_posts($query_string . '&posts_per_page=1&paged=' . $paged);  //pagedとposts_per_pageの指定。表示数は全てposts_per_pageで指定する（WP管理画面では行わない）
+
+function my_pagenavi($args = array())
+{
+    if (!function_exists('wp_pagenavi')) return;
+
+    $defaults = array(
+        'before' => '<div class="pagenation">',
+        'after' => '</div>',
+    );
+    $args = is_array($args) ? array_merge($defaults, $args) : $args;
+    wp_pagenavi($args);
+}

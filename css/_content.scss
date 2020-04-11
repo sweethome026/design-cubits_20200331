@@ -596,6 +596,7 @@ Page style
 			justify-content: center;
 
 			a, span {
+				display: inline-block;
 				margin-right: 10px;
 				height: 40px;
 				width: 40px;
@@ -623,6 +624,16 @@ Page style
 
 			.abbreviation-dots {
 				background-color: transparent;
+			}
+
+			.pages {
+				display: none;
+			}
+
+			.wp-pagenavi {
+				span:nth-child(3) {
+					display: none;
+				}
 			}
 		}
 	}
@@ -757,6 +768,7 @@ Page style
 
 				&__info {
 					@include blog-tag;
+					max-width: 200px;
 				}
 
 				&__title {
