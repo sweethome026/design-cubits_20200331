@@ -2056,6 +2056,7 @@ Page style
 #blog .widget .recent-posts__article__date {
   display: inline-block;
   margin-top: 4px;
+  line-height: 175%;
   color: #666666;
 }
 
