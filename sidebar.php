@@ -3,9 +3,7 @@
 		<h4 class="widget__ttl category__ttl">カテゴリー</h4>
 
 
-		<ul class="category__lists">
-
-			
+		<ul class="category__lists">			
 		<?php // タームの一覧を表示
 			$catlist = wp_list_categories(array(
 				'title_li' => '', // リストの外側に表示されるタイトルを非表示
@@ -76,12 +74,9 @@
 
 	<section class="widget search">
 		<h4 class="widget__ttl search__ttl">検索</h4>
-		<form action="#" class="search-box" role="search">
-			<input type="search" class="search-box__text" name="search-box__text">
-			<button type="submit" class="search-box__submit" id="search-box__submit">
-				<i class="fas fa-search"></i>
-			</button>
-		</form>
+		<?php get_search_form(); ?>
+</form>
+
 	</section><!-- //widget search -->
 
 	<section class="widget tags">
