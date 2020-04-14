@@ -701,11 +701,59 @@ Page style
 				&__item {
 					position: relative;
 					font-size: 1.7rem;
-					padding-right: 40px;
 					padding-left: 0;
 
 					&:before {
 						content: none;
+					}
+				}
+
+				.cat-item {
+					position: relative;
+					font-size: 1.7rem;
+					// padding-right: 40px;
+					padding-left: 0;
+
+					&:before {
+						content: none;
+					}
+
+					ul {
+						li {
+							padding-right: 0;
+						}
+					}
+
+					a:before {
+						content: "\f138";
+						padding-right: 1rem;
+						font-family: "Font Awesome 5 Free";
+						font-weight: 900;
+						font-size: 90%;
+						color: $color-pagettl;
+						line-height: 175%;
+					}
+
+					.children {
+						margin-top: 1rem;
+    					padding-left: 3rem;
+
+						.cat-item {
+							padding-left: 1.562em;
+    						position: relative;
+							padding-right: 0;
+							
+							a:before {
+								position: absolute;
+								top: 4px;
+								left: 0;
+								content: "\f111";
+								font-family: "Font Awesome 5 Free";
+								font-size: 80%;
+								font-weight: 900;
+								color: $color-pagettl;
+							}
+						}
 					}
 				}
 			}

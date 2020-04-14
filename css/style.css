@@ -1972,12 +1972,57 @@ Page style
 #blog .widget .category__lists__item {
   position: relative;
   font-size: 1.7rem;
-  padding-right: 40px;
   padding-left: 0;
 }
 
 #blog .widget .category__lists__item:before {
   content: none;
+}
+
+#blog .widget .category__lists .cat-item {
+  position: relative;
+  font-size: 1.7rem;
+  padding-left: 0;
+}
+
+#blog .widget .category__lists .cat-item:before {
+  content: none;
+}
+
+#blog .widget .category__lists .cat-item ul li {
+  padding-right: 0;
+}
+
+#blog .widget .category__lists .cat-item a:before {
+  content: "\f138";
+  padding-right: 1rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 90%;
+  color: #17636c;
+  line-height: 175%;
+}
+
+#blog .widget .category__lists .cat-item .children {
+  margin-top: 1rem;
+  padding-left: 3rem;
+}
+
+#blog .widget .category__lists .cat-item .children .cat-item {
+  padding-left: 1.562em;
+  position: relative;
+  padding-right: 0;
+}
+
+#blog .widget .category__lists .cat-item .children .cat-item a:before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  content: "\f111";
+  font-family: "Font Awesome 5 Free";
+  font-size: 80%;
+  font-weight: 900;
+  color: #17636c;
 }
 
 #blog .widget .category__name:before {
