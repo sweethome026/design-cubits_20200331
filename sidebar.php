@@ -3,41 +3,105 @@
 		<h4 class="widget__ttl category__ttl">カテゴリー</h4>
 		<ul class="category__lists">
 			<li class="category__lists__item">
-				<a class="category__name">Illustrator<span class="entry-count">0</span></a>
+				<a class="category__name">Illustrator<span class="entry-count">
+				#
+				</a>
 				<ul class="category__contents">
 					<li class="category__contents__item">
-						<a href="#">Illustrator<span class="entry-count">0</span></a>
+						<a href="#">Illustrator<span class="entry-count">
+						<?php
+							$chosen_id = 11; // カテゴリID
+							$thisCat = get_category($chosen_id);
+							echo $thisCat->count;
+						?></span>
+					</a>
 					</li>
 					<li class="category__contents__item">
-						<a href="#">超初心者のためのイラストレーター講座<span class="entry-count">0</span></a>
+						<a href="#">超初心者のためのイラストレーター講座<span class="entry-count">
+							<?php
+								$chosen_id = 12; // カテゴリID
+								$thisCat = get_category($chosen_id);
+								echo $thisCat->count;
+							?>
+						</span>
+						</a>
 					</li>
 				</ul>
 			</li>
 			<li class="category__lists__item">
-				<a class="category__name">WordPress<span class="entry-count">0</span></a>
+				<a class="category__name">WordPress<span class="entry-count">
+				<?php
+					$chosen_id = 5; // カテゴリID
+					$thisCat = get_category($chosen_id);
+					echo $thisCat->count;
+				?>
+				</span>
+				</a>
 			</li>
 			<li class="category__lists__item">
-				<a class="category__name">サイト構築<span class="entry-count">0</span></a>
+				<a class="category__name">サイト構築<span class="entry-count">
+				<?php
+					$chosen_id = 7; // カテゴリID
+					$thisCat = get_category($chosen_id);
+					echo $thisCat->count;
+					?>
+					</span>
 				<ul class="category__contents">
 					<li class="category__contents__item">
-						<a href="#">HTML<span class="entry-count">0</span></a>
+						<a href="#">HTML<span class="entry-count">
+						<?php
+							$chosen_id = 13; // カテゴリID
+							$thisCat = get_category($chosen_id);
+							echo $thisCat->count;
+						?>
+						</span>
 					</li>
 					<li class="category__contents__item">
-						<a href="#">CSS<span class="entry-count">0</span></a>
+						<a href="#">CSS<span class="entry-count">
+						<?php
+							$chosen_id = 14; // カテゴリID
+							$thisCat = get_category($chosen_id);
+							echo $thisCat->count;
+						?>
+						</span>
 					</li>
 					<li class="category__contents__item">
-						<a href="#">JavaScript<span class="entry-count">0</span></a>
+						<a href="#">JavaScript<span class="entry-count">
+						<?php
+							$chosen_id = 15; // カテゴリID
+							$thisCat = get_category($chosen_id);
+							echo $thisCat->count;
+						?>
+						</span>
 					</li>
 				</ul>
 			</li>
 			<li class="category__lists__item">
-				<a class="category__name">Others<span class="entry-count">0</span></a>
+				<a class="category__name">Others<span class="entry-count">
+				<?php
+					$chosen_id = 8; // カテゴリID
+					$thisCat = get_category($chosen_id);
+					echo $thisCat->count;
+				?>
+				</span>
 			</li>
 			<li class="category__lists__item">
-				<a class="category__name">フリーランス<span class="entry-count">0</span></a>
+				<a class="category__name">フリーランス<span class="entry-count">
+				<?php
+					$chosen_id = 9; // カテゴリID
+					$thisCat = get_category($chosen_id);
+					echo $thisCat->count;
+				?>
+				</span>
 			</li>
 			<li class="category__lists__item">
-				<a class="category__name">Days<span class="entry-count">0</span></a>
+				<a class="category__name">Days<span class="entry-count">
+				<?php
+					$chosen_id = 10; // カテゴリID
+					$thisCat = get_category($chosen_id);
+					echo $thisCat->count;
+				?>
+					</span>
 			</li>
 		</ul><!-- //category__lists -->
 	</section><!-- //widget category -->
